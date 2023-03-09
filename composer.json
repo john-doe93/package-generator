@@ -1,0 +1,55 @@
+{
+    "name": "jr-ahmet/package-generator",
+    "description": "Simple package to quickly generate basic structure for other laravel packages.",
+    "license": "MIT",
+    "type": "library",
+    "version": "v0.0.0",
+    "keywords": [
+        "jr-ahmet",
+        "package-generator"
+    ],
+    "authors": [
+        {
+            "name": "Ahmet Şen",
+            "email": "jr.ahmetsen@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/jr-ahmet/package-generator",
+    "support": {
+        "issues": "https://github.com/jr-ahmet/package-generator/issues",
+        "source": "https://github.com/jr-ahmet/package-generator"
+    },
+    "require": {
+        "php": "^8.1",
+        "illuminate/config": "^10.0",
+        "illuminate/filesystem": "^10.0",
+        "illuminate/support": "^10.0",
+        "illuminate/validation": "^10.0",
+        "laravel/framework": "^10.0"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "JrAhmet\\PackageGenerator\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "PackageGenerator": "JrAhmet\\PackageGenerator\\Facades\\PackageGenerator"
+            },
+            "providers": [
+                "JrAhmet\\PackageGenerator\\PackageGeneratorServiceProvider"
+            ]
+        }
+    }
+}
